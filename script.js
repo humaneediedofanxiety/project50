@@ -9,7 +9,7 @@ if (countIndex === null) {
     count.innerHTML = '0'
 }
 
-if (countIndex <= 7) {
+if (countIndex <= 7 || null) {
     sleep.innerHTML = 'To Sleep Before 3:00 AM'
 } else if (countIndex <= 14) {
     sleep.innerHTML = 'To Sleep Before 2:30 AM'
