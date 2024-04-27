@@ -1,7 +1,7 @@
 // Time for the Functionality
 let taskItems = document.querySelectorAll("li");
 let count = document.getElementsByClassName('count')[0];
-let sleep = document.getElementsbyId('sleep');
+let sleep = document.getElementbyId('sleep');
 
 let countIndex = localStorage.getItem('countIn')
 count.innerHTML = countIndex;
