@@ -137,6 +137,12 @@ hr {
     border: none;    
 }
 
+h3 {
+    font-family: terminal;
+    font-size: 18px;
+}
+
+
 @media (max-width: 475px) {
     .container {
         min-width: 0px;
