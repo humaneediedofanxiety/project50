@@ -4,18 +4,47 @@
     box-sizing: border-box;
 }
 
+h2, p, li, h3, h4 {
+    color: #39ff14;
+    font-weight: thin !important;
+}
+
 body {
-    background-color: beige;
+    background-color: black;
+}
+
+@font-face {
+    font-family: terminal;
+    src: url(./font/Terminal.woff);
+}
+
+h4 {
+        font-size: 16px;
+        font-family: terminal;
+}
+
+.stages {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding-top: 36px;
+}
+
+.active {
+    background-color: blue;
+    margin-left: 12px;
 }
 
 .container {
-    background-color: white;
+    background-color: black;
     min-width: 708px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    border: 3px solid black;
+    border: 1px solid #39ff14;
     min-height: 728px;
     display: grid;
     grid-template-columns: 10% 90%;
@@ -32,23 +61,24 @@ body {
 .headText > h2, .main-tasks > h2 {
     margin-top: 24px;
     text-align: center;
-    font-size: 28px;
-    font-family:cursive;
-    font-weight: 400;
+    font-size: 24px;
+    font-family: terminal;
+    font-weight: 100;
     text-transform:uppercase;
 }
 .main-tasks > h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 4px;
     text-decoration: line-through;
 }
 .vertical-text {
     writing-mode: vertical-rl;
     text-orientation: upright;
+    letter-spacing: 4px;
 }
 
 .tasks {
-    margin-left: 92px;
+    margin-left: 64px;
     margin-top: 64px;
     display: flex;
     flex-direction: column;
@@ -57,41 +87,99 @@ body {
 
 .tasks > li {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 28px;
+    background-color: green;
     font-weight: 100;
-    font-family:cursive;
-    text-transform: uppercase;
-    list-style:circle;
+    font-family: terminal;
+    text-transform: lowercase;
+    list-style:lower-latin;
     user-select: none;
 }
 
 .bold, .count {
-    color: red;
+    color:#39ff14;
+    background-color: blue;
 }
 
 .done {
-    text-decoration: line-through;
+    background-color: blue !important;
 }
 
 .quote {
     text-decoration: none;
+    color: #39ff14;
     margin-top: 64px;
+    margin-left: 47%;
     font-style: italic;
-    font-family: cursive;
+    font-family: terminal;
     font-weight: 200;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 #time {
     text-align: center;
-    font-family: cursive;
+    font-family: terminal;
     font-weight: 200;
     font-size: 20px;
     
 }
 
+.space {
+    padding: 12px;
+}
+
 hr {
-    margin-top:8px
+    margin-top:8px;
+    background-color: #39ff14;
+    height: 1px;
+    border: none;    
+}
+
+@media (max-width: 475px) {
+    .container {
+        min-width: 0px;
+        max-width: 475px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .tasks {
+        margin-left: 9% !important;
+        gap: 24px;
+        margin-top: 48px;
+        
+    }
+    .tasks > li {
+        font-size: 17px;
+        
+    }
+
+    .vertical-text {
+        writing-mode:initial;
+        text-orientation: sideways ;
+    }
+
+        .headText>h2,
+        .main-tasks>h2 {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 20px;
+            font-family: terminal;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+                .main-tasks>h2 {
+                    font-size: 17px;
+                    margin-bottom: 4px;
+                    text-decoration: line-through;
+                }
+        .quote {
+            font-size: 17px;
+            margin: 8px;
+            margin-top: 32px;
+        }
 }

@@ -2,6 +2,8 @@
 let taskItems = document.querySelectorAll("li");
 let count = document.getElementsByClassName('count')[0];
 let sleep = document.getElementById('sleep');
+let h4 = document.querySelectorAll('h4');
+let li = document.querySelectorAll('.tasks > li');
 
 let countIndex = localStorage.getItem('countIn')
 count.innerHTML = countIndex;
@@ -10,15 +12,29 @@ if (countIndex === null) {
 }
 
 if (countIndex <= 7) {
+    li[0].innerHTML = 'get up before 10 AM'
+    li[1].innerHTML = 'read 3 pages of a book'
     sleep.innerHTML = 'To Sleep Before 3:00 AM'
+    h4[0].innerHTML = 'stage I <span class="active"><<</span>'
 } else if (countIndex <= 14) {
+    li[1].innerHTML = 'read 5 pages of a book'
+    li[4].innerHTML = 'deep work for 90 minutes'
     sleep.innerHTML = 'To Sleep Before 2:30 AM'
+    h4[1].innerHTML = 'stage I <span class="active"><<</span>'
 } else if (countIndex <= 21) {
+    li[3].innerHTML = 'exercise for 25 minutes'
     sleep.innerHTML = 'To Sleep Before 2:00 AM'
+    h4[2].innerHTML = 'stage I <span class="active"><<</span>'
 } else if (countIndex <= 28) {
     sleep.innerHTML = 'To Sleep Before 1:00 AM'
+    li[4].innerHTML = 'deep work for 120 minutes'
+    h4[3].innerHTML = 'stage I <span class="active"><<</span>'
 } else if (countIndex >= 28) {
+    li[0].innerHTML = 'get up before 8 AM'
+    li[3].innerHTML = 'exercise for 45 minutes'
+    li[4].innerHTML = 'deep work for 180 minutes'
     sleep.innerHTML = 'To Sleep Before 12:00 AM'
+    h4[4].innerHTML = 'stage I <span class="active"><<</span>'
 }
 
 for (let i = 0; i < taskItems.length; i++) {
