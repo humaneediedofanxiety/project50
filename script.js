@@ -12,16 +12,16 @@ if (countIndex === null) {
     count.innerHTML = '0'
 }
 
-if (countIndex <= 7) {
+if (countIndex <= 30) {
     li[0].innerHTML = 'get up before 12 AM'
     li[1].innerHTML = 'read 3 pages of a book'
-    sleep.innerHTML = 'To Sleep Before 3:00 AM'
+    sleep.innerHTML = 'To Sleep Before 2:00 AM'
     h4[0].innerHTML = 'stage I <span class="active"><<</span>'
-    cons.innerHTML = "consumption=after_seven_pm" 
-} else if (countIndex <= 14) {
-    li[1].innerHTML = 'read 3 pages of a book'
+    cons.innerHTML = "consumption=after_eight_pm" 
+} else if (countIndex <= 60) {
+    li[1].innerHTML = 'read 5 pages of a book'
     li[4].innerHTML = 'deep work for 90 minutes'
-    sleep.innerHTML = 'To Sleep Before 2:30 AM'
+    sleep.innerHTML = 'To Sleep Before 1:00 AM'
     h4[1].innerHTML = 'stage I <span class="active"><<</span>'
 } else if (countIndex <= 21) {
     li[0].innerHTML = 'get up before 10 AM'
