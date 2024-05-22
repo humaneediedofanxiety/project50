@@ -19,29 +19,22 @@ if (countIndex <= 30) {
     h4[0].innerHTML = 'stage I <span class="active"><<</span>'
     cons.innerHTML = "consumption=after_eight_pm" 
 } else if (countIndex <= 60) {
+    li[0].innerHTML = 'get up before 11 AM'
+    li[3].innerHTML = 'exercise for 25 minutes'
     li[1].innerHTML = 'read 5 pages of a book'
     li[4].innerHTML = 'deep work for 90 minutes'
     sleep.innerHTML = 'To Sleep Before 1:00 AM'
-    h4[1].innerHTML = 'stage I <span class="active"><<</span>'
-} else if (countIndex <= 21) {
-    li[0].innerHTML = 'get up before 10 AM'
-    li[3].innerHTML = 'exercise for 25 minutes'
-    sleep.innerHTML = 'To Sleep Before 2:00 AM'
-    h4[2].innerHTML = 'stage I <span class="active"><<</span>'
     cons.innerHTML = "consumption=after_nine_pm" 
-} else if (countIndex <= 28) {
-    sleep.innerHTML = 'To Sleep Before 1:00 AM'
+    h4[1].innerHTML = 'stage II <span class="active"><<</span>'
+} else if (countIndex <= 90) {
+    li[0].innerHTML = 'get up before 10 AM'
+    li[3].innerHTML = 'exercise for  45 minutes'
+    li[1].innerHTML = 'read 10 pages of a book'
     li[4].innerHTML = 'deep work for 120 minutes'
-    h4[3].innerHTML = 'stage I <span class="active"><<</span>'
-} else if (countIndex >= 28) {
-    li[0].innerHTML = 'get up before 8 AM'
-    li[3].innerHTML = 'exercise for 45 minutes'
-    li[4].innerHTML = 'deep work for 180 minutes'
     sleep.innerHTML = 'To Sleep Before 12:00 AM'
-    h4[4].innerHTML = 'stage I <span class="active"><<</span>'
     cons.innerHTML = "consumption=after_ten_pm" 
+    h4[1].innerHTML = 'stage III <span class="active"><<</span>'
 }
-
 for (let i = 0; i < taskItems.length; i++) {
     let task = taskItems[i].getAttribute('key')
     console.log(task);
